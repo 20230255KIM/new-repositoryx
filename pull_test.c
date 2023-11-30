@@ -10,20 +10,20 @@ struct Person_Rec {
 
     char tel[15]; // 전화번호
 
-    int grade; // 학년
+    int grade; // 학년적기
 
 };
 
 struct Person_Rec* Input(int n) {
     struct Person_Rec* arr = malloc(sizeof(struct Person_Rec) * n);
     for (int i = 0; i < n; i++) {
-        printf("학번 :");
+        printf("학번을 적어주세요 :");
         scanf("%d", &arr[i].id);
-        printf("이름 :");
+        printf("이름을 적어주세요 :");
         scanf("%s", arr[i].name);
-        printf("전화번호 :");
+        printf("전화번호를 적어주세요 :");
         scanf("%s", arr[i].tel);
-        printf("학년 :");
+        printf("학년을 적어주세요 :");
         scanf("%d", &arr[i].grade);
     }
     return arr;
@@ -31,7 +31,7 @@ struct Person_Rec* Input(int n) {
 
 void Search(struct Person_Rec* arr, int n) {
     int keyword;
-    printf("검색할 학번: ");
+    printf(" 학번검색 및 탐색: ");
     scanf("%d", &keyword);
     for (int i = 0; i < n; i++) {
         if (arr[i].id == keyword) {
